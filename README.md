@@ -1,6 +1,6 @@
 # PixelmonVarPro
 Minecraft Plugin for Pixelmon Mod[1.16.5]
-\n1.16.5的重铸宝可梦模组变量插件
+#1.16.5的重铸宝可梦模组变量插件
 #   %legend_sum% 背包神兽数量
 #   %legend_精灵槽位% 判断该槽位精灵是否是神兽  是就返回 "是"  否就返回 "否"
 #   %eggcheck_step_精灵槽位% 该精灵蛋所需剩余步数
