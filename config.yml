@@ -1,0 +1,48 @@
+#   %legend_sum% 背包神兽数量
+#   %legend_精灵槽位% 判断该槽位精灵是否是神兽  是就返回 "是"  否就返回 "否"
+#   %eggcheck_step_精灵槽位% 该精灵蛋所需剩余步数
+#   %eggcheck_isegg_精灵槽位% 该槽位是否是蛋 是就返回 true;不是就返回 false
+#   %ivsdata_精灵槽位% 该精灵的个体值总和
+#   %ivsdata_per_精灵槽位% 该精灵的个体值百分比
+#   %ivsdata_个体值属性_精灵槽位% 该精灵该个体属性的值 (属性:hp/speed/attack/defense/specialattack/specialdefense)
+#   %evsdata_精灵槽位% 该精灵的努力值总和
+#   %evsdata_per_精灵槽位% 该精灵的努力值百分比
+#   %evsdata_努力值属性_精灵槽位% 该精灵该努力属性的值 (属性:hp/speed/attack/defense/specialattack/specialdefense)
+#   %ForgePoints_精灵槽位% 该精灵熔炼点
+#   %pokedex_find% 已经捕捉的精灵数
+#   %pokedex_percent% 已知精灵图鉴百分比
+#   %pokedex_pokeid_精灵槽位% 精灵对应的图鉴ID (一号获取方案)
+#   %pokedex_pokeid2_精灵槽位% 精灵对应的图鉴ID (二号获取方案)
+#   %otherdata_level_精灵槽位% 该槽位精灵等级
+#   %otherdata_friendship_精灵槽位% 该槽位精灵亲密度
+#   %otherdata_ability_精灵槽位% 该槽位精灵特征
+#   %otherdata_nature_精灵槽位% 该槽位精灵性格
+#   %otherdata_growth_精灵槽位% 该槽位体型
+#   %playerdata_wins% 玩家胜场
+#   %playerdata_losses% 玩家输场
+#   %playerdata_total% 玩家总场次
+#   %pvpro_move_精灵槽位_技能槽位% 指定精灵的技能英文名
+#   %pvpro_name_精灵槽位% 指定精灵的英文名
+#   %pvpro_localname_精灵槽位% 指定精灵的本地名称
+#   %eventinfo_cap_精灵名% 玩家捕捉指定精灵的数量
+#   %eventinfo_beat_精灵名% 玩家击败指定精灵的数量
+#   %eventinfo_capLeg% 玩家捕捉神兽的数量
+Message:
+  reload: "&e[PixelmonVarPro]&a重载成功！"
+  spawnLegend: "&c[神兽刷新提示] &a还有&e %time% &a分钟就要刷神了！！"
+BroMin: 1 #神兽倒计时为多少分钟时进行播报
+
+ForgeConfig:
+  #熔炼点算法:
+  #HP:生命个体值 Attack:攻击个体值 Defence:防御个体值
+  #Speed:速度个体值 SpecialAttack:特攻个体值 SpecialDefence:特防个体值
+  #熔炼点总数 = [各项个体值 * 对应倍率(如下所示) 的 和]/ divide * 个体值百分比 * isLegend
+  #若某项个体值对应倍率或divide没填，则默认值为1
+  #倍率必须>=0
+  HP: 0.66
+  Attack: 0.7
+  Defence: 0.7
+  Speed: 0.2
+  divide: 2
+  #isLegend 判断是否为神兽,如果是，乘以对应倍率，不是则默认倍率为1
+  isLegend: 1.73

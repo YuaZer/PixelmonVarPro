@@ -1,0 +1,14 @@
+name: PixelmonVarPro
+main: io.github.yuazer.pvpro.pvpro
+version: 0.3
+api-version: 1.13
+authors:
+  - YuaZer
+depend:
+  - PlaceholderAPI
+commands:
+  ZPVar:
+    usage: /zpvar
+    description: command for this plugin
+    aliases:
+      - zpv
